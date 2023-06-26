@@ -1,0 +1,771 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(218, 218, 218);
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  background-color: rgb(255, 255, 255);
+}
+
+.addtweet {
+  position: relative;
+  top: 0;
+  background-color: red;
+  z-index: 2;
+  width: 100%;
+}
+
+.twiwrap {
+  color: black;
+  position: fixed;
+  background-color: white;
+  top: 8rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 17rem;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  border-radius: 7px;
+}
+
+.cancellogo {
+  position: absolute;
+  top: 1rem;
+  right: 1.1rem;
+}
+
+.cancel {
+  position: absolute;
+  top: 1rem;
+  right: 1.1rem;
+}
+
+.comhead {
+  margin-bottom: 0.5rem;
+}
+
+.adtwhe {
+  font-size: 1.7rem;
+  color: rgb(66, 66, 66);
+  margin-top: 0.6rem;
+}
+
+.twiboxtext {
+  padding: 0.2rem;
+  font-size: 1.1rem;
+  margin: 1rem 0rem;
+}
+
+.addtweet::before {
+  position: fixed;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.homewraper {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: row;
+}
+
+.sidebar {
+  background-color: rgb(255, 255, 255);
+  color: rgb(27, 27, 27);
+  height: 100vh;
+  flex: 1.5;
+}
+
+.homepage {
+  flex: 9;
+}
+
+.sidebarcom {
+  height: 100%;
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-right: 4px rgb(231, 231, 231) solid;
+  position: fixed;
+}
+
+.liked {
+  color: red;
+}
+
+.megdia {
+  height: 20rem;
+  position: fixed;
+  top: 1rem;
+  left: 35vw;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.megdia::before {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.wraper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.usersidebar {
+  height: 100vh;
+}
+
+.userprofile {
+  margin-left: 1rem;
+  z-index: 1;
+  width: 100%;
+}
+
+.pwraper {
+  flex-direction: column;
+}
+.register {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.registerbox {
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  margin: 0 20px;
+  padding: 40px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  .registerbox {
+    padding: 20px;
+  }
+}
+
+.joinus {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .joinus {
+    font-size: 1.5rem;
+  }
+}
+
+.regisform {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .regisform {
+    margin-top: 10px;
+  }
+}
+
+.regishead {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .regishead {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+}
+
+.registinputs {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #ddd;
+}
+
+.registinputs:focus {
+  border-bottom: 2px solid #007bff;
+  outline: none;
+}
+
+.registbtn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+  .registbtn {
+    font-size: 0.9rem;
+  }
+}
+
+.cant {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  .cant {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+}
+
+.regisli {
+  color: #007bff;
+  font-weight: 600;
+}
+
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+/* Colors */
+:root {
+  --twitter-blue: #1da1f2;
+  --twitter-blue-hover: #0d95e8;
+  --twitter-blue-light: #e8f4fb;
+  --twitter-gray: #657786;
+  --twitter-gray-light: #aab8c2;
+  --twitter-gray-lighter: #e1e8ed;
+  --twitter-white: #fff;
+}
+
+/* Body */
+body {
+  background-color: var(--twitter-blue-light);
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Login box */
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loginbox {
+  background-color: var(--twitter-white);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.loginbox .welcomeback {
+  color: var(--twitter-gray);
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.loginbox .loginform {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.loginform .loginheading {
+  color: var(--twitter-blue);
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loginform .logininputs {
+  background-color: var(--twitter-gray-lighter);
+  border: none;
+  border-radius: 999px;
+  color: var(--twitter-gray);
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding: 12px 20px;
+  width: 100%;
+}
+
+.loginform .loginsubtn {
+  background-color: var(--twitter-blue);
+  border: none;
+  border-radius: 999px;
+  color: var(--twitter-white);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 12px 20px;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.loginform .loginsubtn:hover {
+  background-color: var(--twitter-blue-hover);
+}
+
+.loginform .cant {
+  color: var(--twitter-gray);
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.loginform .cant .regisli {
+  color: var(--twitter-blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.loginform .cant .regisli:hover {
+  text-decoration: underline;
+}
+
+
+.sideitems {
+  list-style-type: none;
+  padding: 0.6rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.sidenav {
+  margin: 1rem;
+}
+
+.links {
+  text-decoration: none;
+  color: rgb(14, 14, 14);
+}
+
+.sideprofile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideimg {
+  object-fit: cover;
+  margin-bottom: 0.8rem;
+  border-radius: 50%;
+  border: 1px solid rgb(133, 133, 133);
+}
+
+.sideusername {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.imgwra {
+  margin-left: 0.5rem;
+}
+
+.sideemail {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.hometweetbtn {
+  width: 6rem;
+  padding: 0.6rem;
+  font-size: 1.1rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.homepg {
+  margin-left: 9rem;
+}
+
+.tweet {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.7rem;
+  padding: 0.4rem;
+  border: 3px solid rgba(216, 216, 216, 0.432);
+}
+
+.tweet:hover {
+  background-color: rgb(234, 242, 255);
+  border-radius: 5px;
+}
+
+.tweetprofile {
+  border: 1ps solid black;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.twusername {
+  cursor: pointer;
+  color: rgb(65, 65, 65);
+}
+
+.createdat {
+  font-size: 0.8rem;
+}
+
+.tweetcont {
+  font-size: 1.06rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.btns {
+  margin: 0.5rem 0rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.likebtn {
+  font-size: 1.3rem;
+}
+
+.replybtn {
+  font-size: 1.3rem;
+}
+
+.replyhead {
+  margin: 1rem 0rem;
+}
+
+.cant {
+  margin-top: 1rem;
+  color: rgb(61, 61, 61);
+}
+
+.regisli {
+  text-decoration: none;
+}
+
+.retweetbtn {
+  font-size: 1.3rem;
+}
+
+.deletebtn {
+  font-size: 1.3rem;
+}
+
+.retweet {
+  font-size: 0.8rem;
+  margin-left: 18.2rem;
+  margin-bottom: -0.6rem;
+  margin-top: 1rem;
+}
+
+.retweeted {
+  color: blue;
+}
+
+.sinwrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.prowraper {
+  margin-left: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.usermainpro {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.userprofile {
+  margin-top: 2rem;
+}
+
+.detailsall {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin: 0.4rem 0rem;
+}
+
+.wap {
+  background-color: white;
+}
+
+.photoupload {
+  margin: 1rem 0rem 0.5rem 0rem;
+}
+
+.followbtn {
+  margin: 0.4rem 0rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 6rem;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.singletweet {
+  background-color: white;
+  height: 100vh;
+}
+
+.singwrap {
+  margin: 1rem 0rem 0rem 18rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0.7rem;
+}
+
+
+
+.onewrap {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.megdia {
+  width: 20rem;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.comwra {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem;
+  border-radius: 7px;
+}
+
+.comtext {
+  font-size: 1rem;
+  padding: 0.2rem;
+  margin-bottom: 0.7rem;
+}
+
+.btndel {
+  font-size: 1rem;
+  padding: 0.5rem 0.3rem;
+  width: 6rem;
+  color: white;
+  text-align: center;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+}
+
+.twilogo {
+  font-size: 2rem;
+  color: blue;
+  margin-top: 1rem;
+  margin-bottom: -0.9rem;
+  margin-left: 1.3rem;
+}
+
+.fontas {
+  margin-right: 0.6rem;
+}
+
+.ided {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  z-index: 2;
+}
+
+.edwrap {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  padding: 0.8rem;
+  padding-right: 2.5rem;
+  border-radius: 10px;
+}
+
+.canlog {
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+}
+
+.ided::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.3;
+  background-color: black;
+  z-index: -1;
+}
+
+.edformpro {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.8rem;
+}
+
+.proitemed {
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+
+.probtned {
+  font-size: 1.1rem;
+  background-color: black;
+  color: white;
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.style {
+  width: 100%;
+  height: 5rem;
+  margin-left: -1rem;
+  position: absolute;
+  background-color: blue;
+  z-index: 1;
+}
+
+.proupedwrap {
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 65vw;
+}
+
+.upedwrap {
+  width: 11rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.4rem;
+}
+
+.uppobt {
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+  background-color: white;
+  padding: 0.4rem;
+  border: 1px rgb(156, 156, 156) solid;
+  border-radius: 5px;
+  color: blue;
+}
+
+.editbt {
+  font-size: 0.9rem;
+  padding: 0.2rem 0.4rem;
+}
+
+.prouser {
+  font-size: 0.9rem;
+  margin-top: 0.1rem;
+}
+
+.allre {
+  margin-top: 0.5rem;
+}
+
+.prousnam {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.edits {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+}
+
+.folflo {
+  display: flex;
+  flex-direction: row;
+  gap: 0.9rem;
+}
+
+.protweimg {
+  border-radius: 50%;
+  object-fit: cover;
+}
